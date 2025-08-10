@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+  final Color color;
+
+  const NoteItem({super.key, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class NoteItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
         decoration: BoxDecoration(
-          color: Colors.pink[100],
+          color: color,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
